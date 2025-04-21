@@ -468,68 +468,7 @@ footer {
     align-self: center;
 }
 
-/* ========== LG+ (por defecto) ========== */
-/* No hace falta media query aquí: todo lo que ya tenés es para desktop */
 
-@media (max-width: 990px) {
-    .baner {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .banerIzquierda,
-    .banerDerecha {
-        min-width: 100%;
-    }
-
-    .banerIzquierda h1 {
-        font-size: 1.8rem;
-    }
-
-    .banerIzquierda p {
-        font-size: 1rem;
-    }
-
-    .guias {
-        margin-top: 4rem;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .card-guia{
-        width: 100%;
-    }
-
-}
-
-/* ========== SM - Hasta 767px ========== */
-@media (max-width: 767.98px) {
-    .baner {
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .banerIzquierda h1 {
-        font-size: 1.5rem;
-    }
-
-    .guias {
-        padding-top: 2rem;
-    }
-
-    .card-guia h3 {
-        font-size: 1.2rem;
-    }
-
-    .testimoniales {
-        padding: 2rem 1rem;
-    }
-
-    .contenedor-cards article {
-        max-width: 100%;
-    }
-}
 
 
 /* 
@@ -599,10 +538,10 @@ footer {
 
 .cartasPorPaquete-img {
     width: 100%;
-    height: 400%;
+    /* height: 400%; */
     object-fit: contain;
     background-color: white;
-    padding: 1rem;
+    padding: .3rem;
     border-bottom: 2px solid var(--color-dorado-apagado);
     transition: transform 0.3s ease;
 }
@@ -1266,4 +1205,136 @@ footer {
     text-decoration: underline;
     text-decoration-color: var(--color-verde-claro);
     text-underline-offset: 4px;
+}
+
+
+
+
+
+/* Media Query */
+@media (max-width: 990px) {
+
+    /*Index*/
+    .baner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banerIzquierda,
+    .banerDerecha {
+        min-width: 100%;
+    }
+
+    .banerIzquierda h1 {
+        font-size: 1.8rem;
+    }
+
+    .banerIzquierda p {
+        font-size: 1rem;
+    }
+
+    .guias {
+        margin-top: 4rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-guia {
+        width: 100%;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-social p {
+        align-items: center;
+    }
+
+    .footer-social ul {
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    /* guias */
+
+    .articulo-guia {
+        width: 85%;
+    }
+
+    /* SETS */
+    .cartasPorPaquete-grid {
+        justify-content: space-evenly;
+    }
+
+    .cartasPorPaquete-booster {
+        /* justify-content: center; */
+    }
+
+    .cartasPorPaquete-link {
+        align-items: center;   
+    }
+
+    .cartasPorPaquete-link img {
+        width: 50%;
+    }
+
+    .cartasPorPaquete-info {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+/* ========== SM - Hasta 767px ========== */
+@media (max-width: 768px) {
+
+    /*Index*/
+    .baner {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .banerIzquierda h1 {
+        font-size: 1.5rem;
+    }
+
+    .guias {
+        padding-top: 2rem;
+    }
+
+    .card-guia h3 {
+        font-size: 1.2rem;
+    }
+
+    .testimoniales {
+        padding: 2rem 1rem;
+    }
+
+    .contenedor-cards article {
+        max-width: 70%;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    .footer-top {
+        justify-content: center;
+    }
+
+    /* guias */
+
+    .articulo-guia {
+        width: 100%;
+    }
+
 }
