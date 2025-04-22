@@ -116,11 +116,9 @@ main {
     padding-top: 150px;
     padding-bottom: 100px;
     padding-inline: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2rem;
+
 }
+
 
 b {
     font-weight: bold;
@@ -166,7 +164,7 @@ button:hover {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    padding-top: 0.5;
+
 }
 
 /* Branding (logo + nombre) */
@@ -995,10 +993,17 @@ footer {
 ==================
 */
 
-/* Estilos para la card de set que ocupa ancho completo */
+
+.main-coleccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
 .set-card {
     display: flex;
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     background: var(--color-azul-profundo2);
@@ -1016,8 +1021,7 @@ footer {
 }
 
 .set-image {
-    width: 300px;
-    height: auto;
+    width: 250px;
     object-fit: contain;
     border-right: 2px solid var(--color-dorado-apagado);
 }
@@ -1051,6 +1055,7 @@ footer {
 
 /* Estilos para el grid de cartas */
 .cards-grid-section {
+    width: 80%;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1072,7 +1077,6 @@ footer {
     padding: 0;
     margin: 0 auto;
     max-width: 1400px;
-    width: fit-content;
 }
 
 .card-item {
@@ -1276,7 +1280,7 @@ footer {
     }
 
     .cartasPorPaquete-link {
-        align-items: center;   
+        align-items: center;
     }
 
     .cartasPorPaquete-link img {
@@ -1287,8 +1291,9 @@ footer {
         font-size: 0.8rem;
     }
 
-
+    
 }
+
 
 /* ========== SM - Hasta 767px ========== */
 @media (max-width: 768px) {
