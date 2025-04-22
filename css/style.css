@@ -823,6 +823,7 @@ footer {
     padding: 1.5rem;
     border-radius: 1rem;
     max-width: 1000px;
+    margin-bottom: 1.5rem;
     margin-inline: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--color-azul-profundo3);
