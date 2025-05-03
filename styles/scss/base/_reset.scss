@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Evita que las imágenes y videos se salgan del contenedor 
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Elimina decoración predeterminada en enlaces
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// Lista sin estilos por defecto 
+ul,
+ol {
+    list-style: none;
+}
+
+// Botones y formularios coherentes 
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+// Hace que los formularios no hereden estilos raros 
+button {
+    cursor: pointer;
+}
+
+// Suaviza el scroll
+html {
+    scroll-behavior: smooth;
+}

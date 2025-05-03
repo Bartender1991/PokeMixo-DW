@@ -1,0 +1,165 @@
+@use "../abstracts/variables" as *;
+
+.baner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 92px 2rem 0;
+    height: $calculo-header;
+    gap: 2rem;
+    background-color: $color-azul-profundo;
+    flex-wrap: wrap;
+
+    &Derecha {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &Izquierda {
+        flex: 1;
+        min-width: 300px;
+        color: white;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        b {
+            font-weight: bold;
+            color: $color-verde-claro;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
+.guias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+
+    .card-guia {
+        display: flex;
+        flex-direction: row;
+        background-color: #0f1a2b;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        width: calc(50% - 1rem);
+
+        /* 2 cards por fila con gap de 2rem */
+        /*  transition: transform 0.3s ease; */
+        a {
+            overflow: hidden;
+            display: block;
+
+            img {
+                width: 250px;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .contenido {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                /* background-color:#1a2942 ; */
+                background-color: $color-azul-profundo2;
+                border: 1px solid white;
+                border-left: none;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+.testimoniales {
+    padding: 3rem 2rem;
+    background-color: #0f1a2b;
+    color: white;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+        article {
+            background-color: #18263f;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            max-width: 300px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                color: #6ee7b7;
+            }
+
+            p {
+                flex-grow: 1;
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+                line-height: 1.4;
+            }
+
+            img {
+                width: 100px;
+                align-self: center;
+            }
+        }
+    }
+}
