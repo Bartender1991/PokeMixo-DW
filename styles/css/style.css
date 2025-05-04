@@ -317,48 +317,15 @@ footer .footer-bottom span {
   align-self: center;
 }
 
-h2 {
-  color: #D4AF37;
-}
-
-a:hover {
-  color: #A0E8AF;
-}
-
-button {
-  background-color: #A0E8AF;
-  color: #1B2A41;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #D4AF37;
-  color: white;
-}
-
-/* 
-==================
-                    ===== PAGES ===== 
-==================
-*/
-/* 
-==================
-                    ===== SET ===== 
-==================
-*/
 .cartasPorPaquete {
   padding: 2rem 0;
   background-color: #1B2A41;
 }
-
 .cartasPorPaquete-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .cartasPorPaquete-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -367,16 +334,13 @@ button:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .cartasPorPaquete-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
   padding: 0;
-  list-style: none;
 }
-
 .cartasPorPaquete-booster {
   background: #263b5a;
   border-radius: 10px;
@@ -386,13 +350,14 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 1px solid #4B86B4;
 }
-
 .cartasPorPaquete-booster:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   border-color: #D4AF37;
 }
-
+.cartasPorPaquete-booster:hover .cartasPorPaquete-img {
+  transform: scale(1.05);
+}
 .cartasPorPaquete-link {
   display: flex;
   flex-direction: column;
@@ -400,21 +365,14 @@ button:hover {
   color: #E5E5E5;
   text-decoration: none;
 }
-
 .cartasPorPaquete-img {
   width: 100%;
-  /* height: 400%; */
   object-fit: contain;
   background-color: white;
   padding: 0.3rem;
   border-bottom: 2px solid #D4AF37;
   transition: transform 0.3s ease;
 }
-
-.cartasPorPaquete-booster:hover .cartasPorPaquete-img {
-  transform: scale(1.05);
-}
-
 .cartasPorPaquete-info {
   display: block;
   padding-top: 0.5rem;
@@ -431,17 +389,15 @@ button:hover {
   min-height: 60px;
 }
 
-.expansion-section {
+.expansion {
   padding: 2rem 0;
   background-color: #1B2A41;
 }
-
 .expansion-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .expansion-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -450,16 +406,13 @@ button:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .expansion-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   padding: 0;
-  list-style: none;
 }
-
 .expansion-card {
   background: #263b5a;
   border-radius: 12px;
@@ -469,21 +422,20 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 1px solid #4B86B4;
 }
-
 .expansion-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   border-color: #D4AF37;
 }
-
+.expansion-card:hover .expansion-img {
+  transform: scale(1.03);
+}
 .expansion-link {
   display: flex;
   flex-direction: column;
   height: 100%;
   color: #E5E5E5;
-  text-decoration: none;
 }
-
 .expansion-img {
   width: 100%;
   height: 180px;
@@ -493,11 +445,6 @@ button:hover {
   border-bottom: 2px solid #D4AF37;
   transition: transform 0.3s ease;
 }
-
-.expansion-card:hover .expansion-img {
-  transform: scale(1.03);
-}
-
 .expansion-info {
   padding: 1.5rem 1rem;
   display: flex;
@@ -507,38 +454,36 @@ button:hover {
   flex-grow: 1;
   gap: 0.8rem;
 }
-
-.expansion-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #A0E8AF;
-}
-
-.expansion-date,
-.expansion-count {
-  font-size: 0.95rem;
-  color: #A3B5C3;
-}
-
 .expansion-info b {
   color: #A0E8AF;
   font-weight: 600;
   background-color: transparent;
   padding: 0;
 }
+.expansion-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #A0E8AF;
+}
+.expansion-date {
+  font-size: 0.95rem;
+  color: #A3B5C3;
+}
+.expansion-count {
+  font-size: 0.95rem;
+  color: #A3B5C3;
+}
 
-.rareza-section {
+.rareza {
   padding: 2rem 0;
   background-color: #1B2A41;
 }
-
 .rareza-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-.rareza-title {
+.rareza-tittle {
   text-align: center;
   margin-bottom: 2rem;
   color: #D4AF37;
@@ -546,16 +491,13 @@ button:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .rareza-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
   padding: 0;
-  list-style: none;
 }
-
 .rareza-card {
   background: #263b5a;
   border-radius: 10px;
@@ -565,22 +507,34 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 1px solid #4B86B4;
 }
-
 .rareza-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   border-color: #D4AF37;
 }
-
+.rareza-card:hover .rareza-icon {
+  transform: scale(1.1);
+}
+.rareza-card:nth-child(-n+4) .rareza-icon {
+  filter: brightness(1.2) saturate(1.5);
+}
+.rareza-card:nth-child(n+5):nth-child(-n+7) .rareza-icon {
+  filter: drop-shadow(0 0 4px gold);
+}
+.rareza-card:nth-child(8) .rareza-icon {
+  filter: drop-shadow(0 0 4px #D4AF37);
+}
+.rareza-card:nth-child(n+9) .rareza-icon {
+  filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.7));
+  animation: rainbow-pulse 2s infinite alternate;
+}
 .rareza-link {
   display: flex;
   flex-direction: column;
   height: 100%;
   color: #E5E5E5;
-  text-decoration: none;
   padding: 1.5rem 1rem;
 }
-
 .rareza-icons {
   display: flex;
   justify-content: center;
@@ -588,18 +542,12 @@ button:hover {
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
-
 .rareza-icon {
   width: 30px;
   height: 30px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-
-.rareza-card:hover .rareza-icon {
-  transform: scale(1.1);
-}
-
 .rareza-label {
   display: block;
   text-align: center;
@@ -607,27 +555,6 @@ button:hover {
   line-height: 1.4;
   color: #E5E5E5;
   margin-top: auto;
-}
-
-.rareza-card:nth-child(-n+4) .rareza-icon {
-  /* Diamantes/Rombos */
-  filter: brightness(1.2) saturate(1.5);
-}
-
-.rareza-card:nth-child(n+5):nth-child(-n+7) .rareza-icon {
-  /* Estrellas */
-  filter: drop-shadow(0 0 4px gold);
-}
-
-.rareza-card:nth-child(8) .rareza-icon {
-  /* Corona */
-  filter: drop-shadow(0 0 4px #D4AF37);
-}
-
-.rareza-card:nth-child(n+9) .rareza-icon {
-  /* Arcoiris */
-  filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.7));
-  animation: rainbow-pulse 2s infinite alternate;
 }
 
 @keyframes rainbow-pulse {
@@ -653,16 +580,6 @@ button:hover {
     filter: drop-shadow(0 0 4px rgba(238, 130, 238, 0.7));
   }
 }
-/* 
-==================
-                    ===== FIN SET ===== 
-==================
-*/
-/* 
-==================
-                    ===== GUIAS ===== 
-==================
-*/
 .articulo-guia {
   background: linear-gradient(135deg, #1f2d42 0%, #B4D8E7 90%, #263b5a 100%);
   padding: 1.5rem;
@@ -724,7 +641,49 @@ button:hover {
   margin-right: 10px;
 }
 
+h2 {
+  color: #D4AF37;
+}
+
+a:hover {
+  color: #A0E8AF;
+}
+
+button {
+  background-color: #A0E8AF;
+  color: #1B2A41;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #D4AF37;
+  color: white;
+}
+
 /* 
+==================
+                    ===== PAGES ===== 
+==================
+*/
+/* 
+==================
+                    ===== SET ===== 
+==================
+*/
+/* 
+==================
+                    ===== FIN SET ===== 
+==================
+*/
+/* 
+==================
+                    ===== GUIAS ===== 
+==================
+*/
+/* 
+
 ==================
                     ===== FIN GUIAS ===== 
 ==================
