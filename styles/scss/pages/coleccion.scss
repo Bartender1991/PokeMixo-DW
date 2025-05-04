@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
+
 }
 
 .set {
@@ -20,6 +21,12 @@
     border: 1px solid $color-azul-suave;
     transition: all 0.3s ease;
 
+    @include media-down(lg) {
+        width: 95%;
+    }
+
+    
+
 
     &:hover {
         transform: translateY(-5px);
@@ -31,6 +38,10 @@
         width: 250px;
         object-fit: contain;
         border-right: 2px solid $color-dorado-apagado;
+
+        @include media-down(lg) {
+            width: 300px;
+        }
     }
 
     &-info {
@@ -46,6 +57,10 @@
         font-size: 2rem;
         margin-bottom: 1rem;
         text-align: center;
+
+        @include media-down(lg) {
+            font-size: 2.3rem;
+        }
     }
 
     &-description {
@@ -55,6 +70,10 @@
         margin: 0;
         text-align: center;
         font-weight: 700;
+
+        @include media-down(lg) {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -65,6 +84,13 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
+
+            @include media-down(lg) {
+                width: 95%;
+            }
+            @include media-down(xxsm) {
+               margin:0;
+            }
         }
 
         &-title {
@@ -174,6 +200,10 @@
         font-weight: 700;
         margin-top: 0.5rem;
         color: #9a9693;
+
+        @include media-down(lg) {
+            font-size: 2rem;
+        }
     }
 
     &-expansion {
@@ -182,6 +212,10 @@
         margin: 0.2rem 0;
         color: #9a9693;
         font-style: italic;
+
+        @include media-down(lg) {
+            font-size: 1.5rem;
+        }
     }
 
     &-number {
@@ -190,6 +224,10 @@
         margin: 0.2rem 0;
         color: #9a9693;
         font-style: italic;
+
+        @include media-down(lg) {
+            font-size: 1.5rem;
+        }
     }
 
     &-rareza {
@@ -201,26 +239,10 @@
         &-icon {
             width: 20px;
             height: auto;
+
+            @include media-down(lg) {
+                width: 40px;
+            }
         }
-    }
-}
-
-
-
-@include media-down(lg) {
-
-    .card {
-        &-name {
-            font-size: 1.5rem;
-        }
-
-        &-expansion {
-            font-size: 0.9rem;
-        }
-
-        &-number {
-            font-size: 0.9rem;
-        }
-
     }
 }

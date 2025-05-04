@@ -10,6 +10,8 @@
     align-items: center;
     gap: 1.5rem;
 
+
+
     &-top {
         width: 100%;
         display: flex;
@@ -122,11 +124,61 @@
         .navegacion {
             ul {
                 li {
-                    a {font-size: 1.5rem;}
+                    a {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
-        &-bottom{
+
+        &-bottom {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include media-down(xxsm) {
+    .footer {
+        align-items: center;
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-social {
+            p {
+                align-items: center;
+                font-size: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+
+            ul {
+                align-items: center;
+                margin-bottom: 1rem;
+                gap: 2rem;
+
+                li {
+                    img {
+                        width: 50px;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        .navegacion {
+            ul {
+                li {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
             font-size: 1.5rem;
         }
     }

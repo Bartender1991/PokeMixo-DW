@@ -1,8 +1,14 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
 
 main {
     min-height: $calculo-header;
     padding-top: 150px;
     padding-bottom: 100px;
     padding-inline: 2rem;
+
+    @include media-down(xsm) {
+        width: 100%;
+        max-width: 1400px;
+    }
 }

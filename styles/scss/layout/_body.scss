@@ -1,7 +1,14 @@
 @use "../abstracts/variables" as *;
-
+@use "../abstracts/breakpoints" as *;
 
 body {
     background-color: $color-azul-profundo;
     color: $color-gris-claro;
+
+    @include media-down(xsm) {
+        display: flex;
+        align-items: center; 
+        min-height: 100vh;
+        flex-direction: column;
+    }
 }
