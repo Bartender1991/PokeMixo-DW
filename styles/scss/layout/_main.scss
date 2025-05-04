@@ -7,8 +7,9 @@ main {
     padding-bottom: 100px;
     padding-inline: 2rem;
 
-    @include media-down(xsm) {
-        width: 100%;
-        max-width: 1400px;
+    @include media-down(md) {
+        padding-inline: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

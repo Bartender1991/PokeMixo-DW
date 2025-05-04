@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 }
+
 html,
 body {
     height: 100%;
@@ -12,6 +13,8 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; 
+    width: 100%;
 }
 
 // Evita que las imágenes y videos se salgan del contenedor 

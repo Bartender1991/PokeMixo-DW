@@ -14,6 +14,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img,
@@ -62,14 +64,6 @@ body {
   background-color: #1B2A41;
   color: #E5E5E5;
 }
-@media (max-width: 479.98px) {
-  body {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-}
 
 main {
   min-height: calc(100vh - 92px);
@@ -77,50 +71,53 @@ main {
   padding-bottom: 100px;
   padding-inline: 2rem;
 }
-@media (max-width: 479.98px) {
+@media (max-width: 767.98px) {
   main {
-    width: 100%;
-    max-width: 1400px;
+    padding-inline: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
   background-color: #263b5a;
   color: white;
+  padding: 1rem 2rem;
   position: fixed;
   z-index: 1000;
   width: 100%;
 }
-#header .branding a {
+#header .navbar-brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
-  color: inherit;
 }
-#header .branding a img {
-  width: 60px;
+#header .navbar-brand img {
+  width: 35%;
   height: auto;
 }
-#header .branding a span {
-  text-decoration: none;
-}
-#header .navegacion ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-#header .navegacion ul li a {
+#header .navbar-brand span {
+  font-weight: bold;
+  font-size: 1.5rem;
   color: inherit;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  width: 35%;
 }
-#header .navegacion ul li:hover {
+#header .navbar-nav {
+  gap: 1.5rem;
+}
+#header .navbar-nav .nav-link {
+  color: white;
+  font-weight: 500;
+}
+#header .navbar-nav .nav-link:hover {
   color: #A0E8AF;
+}
+#header .navbar-toggler {
+  background: #D4AF37;
+}
+#header .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 @media (max-width: 991.98px) {
@@ -162,7 +159,6 @@ main {
 .footer-social ul {
   display: flex;
   gap: 1rem;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -185,7 +181,6 @@ main {
 .footer .navegacion ul {
   display: flex;
   gap: 1.5rem;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -228,34 +223,45 @@ main {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 319.98px) {
+@media (max-width: 479.98px) {
   .footer {
-    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
   }
   .footer-top {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  .footer-social p {
-    align-items: center;
-    font-size: 1.5rem;
-    padding-bottom: 1.5rem;
+  .footer-social {
+    flex: 1 1 45%;
+    text-align: left;
   }
   .footer-social ul {
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
-    gap: 2rem;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 0rem;
   }
-  .footer-social ul li img {
-    width: 50px;
-    padding-bottom: 1rem;
+  .footer .navegacion {
+    flex: 1 1 45%;
+    text-align: left;
   }
-  .footer .navegacion ul li a {
-    font-size: 1.5rem;
+  .footer .navegacion ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
   }
   .footer-bottom {
-    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
   }
 }
 .baner {
@@ -268,12 +274,26 @@ main {
   background-color: #1B2A41;
   flex-wrap: wrap;
 }
+@media (max-width: 991.98px) {
+  .baner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+    align-items: normal;
+  }
+}
 .banerDerecha {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 300px;
+}
+@media (max-width: 991.98px) {
+  .banerDerecha {
+    min-width: 100%;
+  }
 }
 .banerDerecha img {
   max-width: 100%;
@@ -285,14 +305,39 @@ main {
   min-width: 300px;
   color: white;
 }
+@media (max-width: 991.98px) {
+  .banerIzquierda {
+    min-width: 100%;
+  }
+}
 .banerIzquierda h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 991.98px) {
+  .banerIzquierda h1 {
+    font-size: 2.5rem;
+  }
 }
 .banerIzquierda p {
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
+}
+@media (max-width: 991.98px) {
+  .banerIzquierda p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .banerIzquierda p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .banerIzquierda p {
+    font-size: 0.8rem;
+  }
 }
 .banerIzquierda b {
   font-weight: bold;
@@ -309,6 +354,17 @@ main {
   gap: 2rem;
   padding: 2rem;
 }
+@media (max-width: 991.98px) {
+  .guias {
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .guias {
+    flex-wrap: nowrap;
+  }
+}
 .guias .card-guia {
   display: flex;
   flex-direction: row;
@@ -317,19 +373,41 @@ main {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: calc(50% - 1rem);
-  /* 2 cards por fila con gap de 2rem */
-  /*  transition: transform 0.3s ease; */
+}
+@media (max-width: 991.98px) {
+  .guias .card-guia {
+    width: 90%;
+  }
+}
+@media (max-width: 767.98px) {
+  .guias .card-guia {
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
 }
 .guias .card-guia a {
   overflow: hidden;
   display: block;
 }
 .guias .card-guia a img {
-  width: 250px;
-  height: 100%;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+}
+@media (max-width: 991.98px) {
+  .guias .card-guia a img {
+    width: 350px;
+    height: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .guias .card-guia a img {
+    object-fit: cover;
+  }
 }
 .guias .card-guia a:hover {
   transform: scale(1.1);
@@ -354,6 +432,12 @@ main {
   font-size: 1.5rem;
   line-height: 1.4;
 }
+@media (max-width: 991.98px) {
+  .guias .card-guia .contenido h3 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+}
 
 .testimoniales {
   padding: 3rem 2rem;
@@ -364,6 +448,13 @@ main {
 .testimoniales h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 991.98px) {
+  .testimoniales h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+  }
 }
 .testimoniales .contenedor-cards {
   display: flex;
@@ -383,6 +474,13 @@ main {
   box-shadow: inset -5px -8px 12px rgba(185, 54, 190, 0.4);
   transition: transform 0.3s ease;
 }
+@media (max-width: 991.98px) {
+  .testimoniales .contenedor-cards article {
+    max-width: none;
+    min-height: auto;
+    width: 90%;
+  }
+}
 .testimoniales .contenedor-cards article:hover {
   transform: translateY(-5px);
 }
@@ -391,72 +489,32 @@ main {
   margin-bottom: 1rem;
   color: #6ee7b7;
 }
+@media (max-width: 991.98px) {
+  .testimoniales .contenedor-cards article h3 {
+    font-size: 2rem;
+  }
+}
 .testimoniales .contenedor-cards article p {
   flex-grow: 1;
   font-size: 0.95rem;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
+@media (max-width: 991.98px) {
+  .testimoniales .contenedor-cards article p {
+    font-size: 1.5rem;
+  }
+}
 .testimoniales .contenedor-cards article img {
   width: 100px;
   align-self: center;
 }
-
 @media (max-width: 991.98px) {
-  .baner {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    gap: 0;
-    align-items: normal;
-  }
-  .banerIzquierda {
-    min-width: 100%;
-  }
-  .banerIzquierda h1 {
-    font-size: 2.5rem;
-  }
-  .banerIzquierda p {
-    font-size: 1.5rem;
-  }
-  .banerDerecha {
-    min-width: 100%;
-  }
-  .guias {
-    align-items: center;
-    padding-bottom: 5rem;
-  }
-  .guias .card-guia {
-    width: 90%;
-  }
-  .guias .card-guia .contenido h3 {
-    font-size: 1.8rem;
-    line-height: 1.5;
-  }
-  .guias .card-guia a img {
-    width: 350px;
-    height: 100%;
-  }
-  .testimoniales h2 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 3rem;
-  }
-  .testimoniales .contenedor-cards article {
-    max-width: none;
-    min-height: auto;
-    width: 90%;
-  }
-  .testimoniales .contenedor-cards article h3 {
-    font-size: 2rem;
-  }
-  .testimoniales .contenedor-cards article p {
-    font-size: 1.5rem;
-  }
   .testimoniales .contenedor-cards article img {
     width: 200px;
   }
 }
+
 .cartasPorPaquete {
   padding: 2rem 0;
   background-color: #1B2A41;
@@ -1031,7 +1089,7 @@ main {
     width: 95%;
   }
 }
-@media (max-width: 319.98px) {
+@media (max-width: 479.98px) {
   .card-grid-section {
     margin: 0;
   }
@@ -1195,40 +1253,6 @@ button {
 button:hover {
   background-color: #D4AF37;
   color: white;
-}
-
-/* ========== SM - Hasta 767px ========== */
-@media (max-width: 768px) {
-  /*Index*/
-  .baner {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-  }
-  .banerIzquierda h1 {
-    font-size: 1.5rem;
-  }
-  .guias {
-    padding-top: 2rem;
-  }
-  .card-guia h3 {
-    font-size: 1.2rem;
-  }
-  .testimoniales {
-    padding: 2rem 1rem;
-  }
-  .contenedor-cards article {
-    max-width: 70%;
-  }
-  footer {
-    align-items: center;
-  }
-  .footer-top {
-    justify-content: center;
-  }
-  /* guias */
-  .articulo-guia {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
