@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-
+@use "../abstracts/breakpoints" as *;
 
 .articulo-guia {
     background: linear-gradient(135deg,
@@ -62,5 +62,37 @@
     .video-wrapper {
         padding: 1rem;
         padding-top: 2rem;
+    }
+}
+
+
+@include media-down(lg) {
+    .articulo {
+        &-guia {
+            padding: 1rem;
+            width: 100%;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                li {
+                    font-size: 1.5rem;
+                    &::before {
+                        content: "⭐";
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
     }
 }

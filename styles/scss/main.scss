@@ -47,56 +47,6 @@ button:hover {
 
 
 
-
-/* Media Query */
-@media (max-width: 990px) {
-
-    footer {
-        align-items: center;
-    }
-
-    .footer-top {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .footer-social p {
-        align-items: center;
-    }
-
-    .footer-social ul {
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    /* guias */
-
-    .articulo-guia {
-        width: 85%;
-    }
-
-    /* SETS */
-    .cartasPorPaquete-grid {
-        justify-content: space-evenly;
-    }
-
-    .cartasPorPaquete-link {
-        align-items: center;
-    }
-
-    .cartasPorPaquete-link img {
-        width: 50%;
-    }
-
-    .cartasPorPaquete-info {
-        font-size: 0.8rem;
-    }
-
-    
-}
-
-
 /* ========== SM - Hasta 767px ========== */
 @media (max-width: 768px) {
 
