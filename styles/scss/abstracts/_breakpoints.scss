@@ -1,0 +1,154 @@
+// src/scss/abstracts/_breakpoints.scss
+
+// Breakpoints al estilo Bootstrap 5 + personalizados
+$breakpoint-xxsm: 320px; // Muy pequeños
+$breakpoint-xsm: 480px; // Pequeños a medianos
+$breakpoint-sm: 576px; // Teléfonos grandes o tablets chicas
+$breakpoint-md: 768px; // Tablets
+$breakpoint-lg: 992px; // Laptops chicas
+$breakpoint-xl: 1200px; // Laptops grandes o monitores medianos 
+$breakpoint-xxl: 1400px; // Monitores anchos
+
+// Mixin para aplicar estilos desde cierto ancho (min-width)
+@mixin media-up($breakpoint) {
+    @if $breakpoint ==xxsm {
+        @media (min-width: $breakpoint-xxsm) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xsm {
+        @media (min-width: $breakpoint-xsm) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xxl {
+        @media (min-width: $breakpoint-xxl) {
+            @content;
+        }
+    }
+}
+
+// Mixin para aplicar estilos hasta cierto ancho (max-width)
+@mixin media-down($breakpoint) {
+    @if $breakpoint == xxsm {
+      @media (max-width: #{($breakpoint-xxsm - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == xsm {
+      @media (max-width: #{($breakpoint-xsm - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == sm {
+      @media (max-width: #{($breakpoint-sm - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == md {
+      @media (max-width: #{($breakpoint-md - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == lg {
+      @media (max-width: #{($breakpoint-lg - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == xl {
+      @media (max-width: #{($breakpoint-xl - 0.02px)}) {
+        @content;
+      }
+    } @else if $breakpoint == xxl {
+      @media (max-width: #{($breakpoint-xxl - 0.02px)}) {
+        @content;
+      }
+    }
+  }
+
+// Mixin para aplicar estilos entre dos tamaños (min y max)
+@mixin media-between($min, $max) {
+    $min-width: null;
+    $max-width: null;
+
+    @if $min ==xxsm {
+        $min-width: $breakpoint-xxsm;
+    }
+
+    @else if $min ==xsm {
+        $min-width: $breakpoint-xsm;
+    }
+
+    @else if $min ==sm {
+        $min-width: $breakpoint-sm;
+    }
+
+    @else if $min ==md {
+        $min-width: $breakpoint-md;
+    }
+
+    @else if $min ==lg {
+        $min-width: $breakpoint-lg;
+    }
+
+    @else if $min ==xl {
+        $min-width: $breakpoint-xl;
+    }
+
+    @else if $min ==xxl {
+        $min-width: $breakpoint-xxl;
+    }
+
+    @if $max ==xxsm {
+        $max-width: $breakpoint-xxsm - 0.02px;
+    }
+
+    @else if $max ==xsm {
+        $max-width: $breakpoint-xsm - 0.02px;
+    }
+
+    @else if $max ==sm {
+        $max-width: $breakpoint-sm - 0.02px;
+    }
+
+    @else if $max ==md {
+        $max-width: $breakpoint-md - 0.02px;
+    }
+
+    @else if $max ==lg {
+        $max-width: $breakpoint-lg - 0.02px;
+    }
+
+    @else if $max ==xl {
+        $max-width: $breakpoint-xl - 0.02px;
+    }
+
+    @else if $max ==xxl {
+        $max-width: $breakpoint-xxl - 0.02px;
+    }
+
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}

@@ -1,0 +1,7 @@
+ @use "../abstracts/variables" as *;
+
+ .subrayado {
+     text-decoration: underline;
+     text-decoration-color: $color-verde-claro;
+     text-underline-offset: 4px;
+ }

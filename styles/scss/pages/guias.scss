@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as *;
 
+
 .articulo-guia {
     background: linear-gradient(135deg,
             $color-azul-profundo3 0%,
@@ -12,55 +13,54 @@
     margin-inline: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border: 1px solid $color-azul-profundo3;
-}
 
-.articulo-guia p {
-    text-align: justify;
-    padding: 1rem;
+    h2 {
+        text-align: center;
+        padding: 1rem;
+    }
 
-}
+    h3 {
+        text-align: center;
+        padding: 1rem;
+    }
 
-.articulo-guia .video-wrapper {
-    padding: 1rem;
-    padding-top: 2rem;
-}
+    p {
+        text-align: justify;
+        padding: 1rem;
+    }
 
-.articulo-guia h2 {
-    text-align: center;
-    padding: 1rem;
-}
+    b {
+        color: $color-azul-texto;
+        background-color: $color-verde-claro;
+    }
 
-.articulo-guia h3 {
-    text-align: center;
-    padding: 1rem;
-}
+    ul {
+        padding-left: 20px;
 
-.articulo-guia b {
-    color: $color-azul-texto;
-    background-color: $color-verde-claro;
-}
+        li {
+            padding: 12px 20px;
+            color: $color-gris-claro;
+            font-size: 1.1rem;
+            border-bottom: 1px solid $color-azul-profundo2;
+            transition: background 0.3s ease, color 0.3s ease;
 
-.articulo-guia ul {
-    padding-left: 20px;
-}
+            &:hover {
+                background-color: $color-azul-suave;
+                color: $color-azul-texto;
+                cursor: pointer;
+            }
 
-.articulo-guia ul li {
-    padding: 12px 20px;
-    color: $color-gris-claro;
-    font-size: 1.1rem;
-    border-bottom: 1px solid $color-azul-profundo2;
-    transition: background 0.3s ease, color 0.3s ease;
-}
+            &::before {
+                content: "•";
+                color: $color-dorado-apagado;
+                font-size: 1.2rem;
+                margin-right: 10px;
+            }
+        }
+    }
 
-.articulo-guia ul li:hover {
-    background-color: $color-azul-suave;
-    color: $color-azul-texto;
-    cursor: pointer;
-}
-
-.articulo-guia ul li::before {
-    content: "•";
-    color: $color-dorado-apagado;
-    font-size: 1.2rem;
-    margin-right: 10px;
+    .video-wrapper {
+        padding: 1rem;
+        padding-top: 2rem;
+    }
 }

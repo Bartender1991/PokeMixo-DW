@@ -1,4 +1,6 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
 
 .baner {
     display: flex;
@@ -161,5 +163,42 @@
                 align-self: center;
             }
         }
+    }
+}
+
+
+@include media-down(lg) {
+    .baner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &Izquierda {
+            min-width: 100%;
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+        }
+
+        &Derecha {
+            min-width: 100%;
+        }
+    }
+
+    .guias {
+        margin-top: 4rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-guia {
+        width: 100%;
     }
 }
