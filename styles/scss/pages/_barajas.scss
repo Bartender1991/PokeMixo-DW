@@ -11,6 +11,10 @@
         margin-bottom: 2rem;
         color: $color-dorado-apagado;
         font-size: 2rem;
+
+        @include media-down(lg) {
+            font-size: 2.3rem;
+        }
     }
 
     &-card {
@@ -27,6 +31,10 @@
         font-size: 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
+
+        @include media-down(lg) {
+            font-size: 1.9rem;
+        }
     }
 
     &-image {
@@ -37,6 +45,10 @@
         margin: 0 auto 1.5rem;
         display: block;
         border: 2px solid $color-dorado-apagado;
+
+        @include media-down(lg) {
+            max-width: 1000px;
+        }
     }
 
     &-content {
@@ -52,6 +64,10 @@
             background: rgba(0, 0, 0, 0.2);
             padding: 1rem;
             border-radius: 8px;
+
+            @include media-down(lg) {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
         }
 
         &-column {
@@ -69,6 +85,10 @@
             margin-bottom: 1rem;
             text-align: justify;
         }
+
+        @include media-down(lg) {
+            font-size: 1.3rem;
+        }
     }
 
     &-catergory {
@@ -76,6 +96,10 @@
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
         text-align: start;
+
+        @include media-down(lg) {
+            font-size: 2rem;
+        }
     }
 
     &-items {
@@ -87,43 +111,10 @@
             padding: 0.3rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
-        }
-    }
-}
 
-
-
-@include media-down(lg) {
-
-    .baraja {
-        &-title {
-            font-size: 2.3rem;
-        }
-
-        &-name {
-            font-size: 1.9rem;
-        }
-
-        &-image {
-            max-width: 1000px;
-        }
-
-        &-list-container {
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        }
-
-        &-category {
-            font-size: 2rem;
-        }
-
-        &-items {
-            li {
+            @include media-down(lg) {
                 font-size: 1.3rem;
             }
-        }
-
-        &-description {
-            font-size: 1.3rem;
         }
     }
 }

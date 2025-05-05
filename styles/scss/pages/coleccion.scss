@@ -6,14 +6,15 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
-
 }
 
 .set {
     display: flex;
     width: 80%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     background: $color-azul-profundo2;
     border-radius: 12px;
     overflow: hidden;
@@ -23,9 +24,15 @@
 
     @include media-down(lg) {
         width: 95%;
+        margin-top: 2rem;
     }
 
-    
+    @include media-down(md) {
+        flex-direction: column;
+        margin-top: 0rem;
+    }
+
+
 
 
     &:hover {
@@ -41,6 +48,12 @@
 
         @include media-down(lg) {
             width: 300px;
+        }
+
+        @include media-down(md) {
+            width: 100%;
+            border-right: none;
+            border-bottom: 2px solid $color-dorado-apagado;
         }
     }
 
@@ -61,6 +74,11 @@
         @include media-down(lg) {
             font-size: 2.3rem;
         }
+
+        @include media-down(md) {
+            font-size: 2.0rem;
+        }
+
     }
 
     &-description {
@@ -73,6 +91,10 @@
 
         @include media-down(lg) {
             font-size: 1.5rem;
+        }
+        @include media-down(md) {
+            font-size: 1.4rem;
+            font-weight: 500;
         }
     }
 }
@@ -88,8 +110,9 @@
             @include media-down(lg) {
                 width: 95%;
             }
+
             @include media-down(xsm) {
-               margin:0;
+                margin: 0;
             }
         }
 
@@ -100,6 +123,10 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            @include media-down(md) {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
         }
 
         &-container {

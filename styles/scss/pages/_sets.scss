@@ -19,6 +19,14 @@
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include media-down(lg) {
+            font-size: 2.3rem;
+        }
+
+        @include media-down(xsm) {
+            font-size: 1.5rem;
+        }
     }
 
     &-grid {
@@ -27,6 +35,11 @@
         gap: 1.5rem;
         justify-content: center;
         padding: 0;
+
+        @include media-down(lg) {
+            justify-content: space-evenly;
+        }
+
     }
 
     &-booster {
@@ -47,6 +60,17 @@
                 transform: scale(1.05);
             }
         }
+
+        @include media-down(lg) {
+            width: 48%;
+        }
+        @include media-down(md) {
+            width: 80%;
+        }
+
+        @include media-down(xsm) {
+            width: 100%;
+        }
     }
 
     &-link {
@@ -55,6 +79,10 @@
         height: 100%;
         color: $color-gris-claro;
         text-decoration: none;
+
+        @include media-down(lg) {
+            align-items: center;
+        }
     }
 
     &-img {
@@ -64,6 +92,10 @@
         padding: .3rem;
         border-bottom: 2px solid $color-dorado-apagado;
         transition: transform 0.3s ease;
+
+        @include media-down(lg) {
+            padding: 1.5rem;
+        }
     }
 
     &-info {
@@ -74,12 +106,24 @@
         font-size: 0.95rem;
         font-weight: 500;
         color: $color-gris-claro;
-        background-color: $color-azul-profundo3;
         flex-grow: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: 60px;
+
+        @include media-down(lg) {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            font-size: 1.8rem;
+        }
+
+        @include media-down(sm) {
+            padding: 0.5rem;
+            font-size: 1.8rem;
+
+        }
     }
 }
 
@@ -87,10 +131,23 @@
     padding: 2rem 0;
     background-color: $color-azul-profundo;
 
+    @include media-down(lg) {
+        margin: 1.5rem;
+    }
+
+    @include media-down(sm) {
+        margin: 0;
+        padding: 0;
+    }
+
     &-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 1rem;
+
+        @include media-down(sm) {
+            //padding: 0;
+        }
     }
 
     &-title {
@@ -100,6 +157,14 @@
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include media-down(lg) {
+            font-size: 2.3rem;
+        }
+
+        @include media-down(sm) {
+            font-size: 1.8rem;
+        }
     }
 
     &-grid {
@@ -127,6 +192,17 @@
             .expansion-img {
                 transform: scale(1.03);
             }
+        }
+
+        @include media-down(lg) {
+            width: 48%;
+        }
+        @include media-down(md) {
+            width: 85%;
+        }
+
+        @include media-down(sm) {
+            width: 40rem;
         }
     }
 
@@ -162,22 +238,55 @@
             background-color: transparent;
             padding: 0;
         }
+
+        @include media-down(sm) {
+            width: 100%;
+        }
     }
 
     &-name {
         font-size: 1.2rem;
         font-weight: 600;
         color: $color-verde-claro;
+
+        @include media-down(lg) {
+            font-size: 2rem;
+        }
+
+        @include media-down(sm) {
+            font-size: 1.7rem;
+            font-weight: 1000;
+            text-align: center;
+        }
     }
 
     &-date {
         font-size: 0.95rem;
         color: $color-gris-azulado;
+
+        @include media-down(lg) {
+            font-size: 1.4rem;
+        }
+
+        @include media-down(sm) {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
     }
 
     &-count {
         font-size: 0.95rem;
         color: $color-gris-azulado;
+
+        @include media-down(lg) {
+            font-size: 1.4rem;
+        }
+
+        @include media-down(sm) {
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
+        }
     }
 }
 
@@ -199,6 +308,10 @@
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include media-down(lg) {
+            font-size: 2.3rem;
+        }
 
     }
 
@@ -251,6 +364,16 @@
             filter: drop-shadow(0 0 4px rgba(255, 0, 255, 0.7));
             animation: rainbow-pulse 2s infinite alternate;
         }
+
+        @include media-down(lg) {
+            width: 31.5%;
+        }
+        @include media-down(md) {
+            width: 80%;
+        }
+        @include media-down(sm) {
+            width: 100%;
+        }
     }
 
     &-link {
@@ -259,6 +382,10 @@
         height: 100%;
         color: $color-gris-claro;
         padding: 1.5rem 1rem;
+
+        @include media-down(sm) {
+            padding: 0;
+        }
     }
 
     &-icons {
@@ -274,6 +401,11 @@
         height: 30px;
         object-fit: contain;
         transition: transform 0.3s ease;
+
+        @include media-down(lg) {
+            width: 18%;
+            height: auto;
+        }
     }
 
     &-label {
@@ -283,6 +415,13 @@
         line-height: 1.4;
         color: $color-gris-claro;
         margin-top: auto;
+
+        @include media-down(lg) {
+            font-size: 1.5rem;
+        }
+        @include media-down(sm) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -313,86 +452,5 @@
 
     100% {
         filter: drop-shadow(0 0 4px rgba(238, 130, 238, 0.7));
-    }
-}
-
-
-
-@include media-down(lg) {
-    .cartasPorPaquete {
-        &-container {}
-
-        &-title {
-            font-size: 2.3rem;
-        }
-
-        &-grid {
-            justify-content: space-evenly;
-        }
-
-        &-booster {
-            width: 48%;
-        }
-
-        &-link {
-            align-items: center;
-        }
-
-        &-img {
-            //  width: 50%;
-            padding: 1.5rem;
-        }
-
-        &-info {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            font-size: 1.8rem;
-
-        }
-    }
-
-    .expansion {
-        margin: 1.5rem;
-
-        &-title {
-            font-size: 2.3rem;
-        }
-
-        &-card {
-            width: 48%;
-        }
-
-        &-name {
-            font-size: 2rem;
-        }
-
-        &-date {
-            font-size: 1.4rem;
-        }
-
-        &-count {
-            font-size: 1.4rem;
-        }
-
-    }
-
-
-    .rareza {
-        &-title {
-            font-size: 2.3rem;
-        }
-
-        &-card {
-            width: 31.5%;
-        }
-
-        &-icon {
-            width: 18%;
-            height: auto;
-        }
-        &-label{
-            font-size: 1.5rem;
-        }
     }
 }
