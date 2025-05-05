@@ -2,81 +2,96 @@
 @use "../abstracts/breakpoints" as *;
 
 #header {
-    background-color: $color-azul-profundo2;
-    color: white;
-    padding: 1rem 2rem;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-  
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-  
-      img {
-        width: 35%;
-        height: auto;
+  background-color: $color-azul-profundo2;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 35%;
+      height: auto;
+
+      @include media-down(lg) {
+          width: 100px;
+        }
       }
-  
+
       span {
         font-weight: bold;
         font-size: 1.5rem;
-        color: inherit;
-        width: 35%;
-        
-      }
-    }
-  
-    //contenedor del hamburgesa
-    .navbar-nav {
-      gap: 1.5rem;
-      
-      //links dentro del contenedor 
-      .nav-link {
         color: white;
-        font-weight: 500;
-       
-        &:hover {
-          color: $color-verde-claro;
+        width: 35%;
+
+        @include media-down(lg) {
+          font-size: 1.5rem;
+          }
+
+          @include media-down(md) {
+            display: none;
+          }
+        }
+
+
+      }
+
+      //contenedor del hamburgesa
+      .navbar-nav {
+        gap: 1.5rem;
+
+        //links dentro del contenedor 
+        .nav-link {
+          color: white;
+          font-weight: 500;
+
+          &:hover {
+            color: $color-verde-claro;
+          }
+        }
+      }
+
+      //hamburguesa
+
+      .navbar-toggler {
+        background: $color-dorado-apagado;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
         }
       }
     }
-  
-    //hamburguesa
-
-    .navbar-toggler {
-      background: $color-dorado-apagado;
-    
-      &:focus {
-        outline: none;
-        box-shadow: none;
-      }
-    }
-  }
-  
 
 
-@include media-down(lg) {
-#header{
-    .branding{
-        a{
-            span{
+
+    @include media-down(lg) {
+      #header {
+        .branding {
+          a {
+            span {
+              font-size: 1.5rem;
+            }
+
+            img {
+              width: 80px;
+            }
+          }
+        }
+
+        .navegacion {
+          ul {
+            li {
+              a {
                 font-size: 1.5rem;
+              }
             }
-            img{
-                width: 80px;
-            }
+          }
         }
+      }
     }
-    .navegacion{
-        ul{
-            li{
-                a{
-                    font-size: 1.5rem;
-                }
-            }
-        }
-    }
-}
-}

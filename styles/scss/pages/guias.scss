@@ -13,25 +13,63 @@
     margin-inline: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border: 1px solid $color-azul-profundo3;
+    margin-top: 1.5rem;
 
+    @include media-down(lg) {
+        padding: 0;
+        width: 100%;
+    }
     h2 {
         text-align: center;
         padding: 1rem;
+
+        @include media-down(lg) {
+            font-size: 2.2rem;
+        }
+        @include media-down(sm) {
+            font-size: 1.7rem;
+        }
+        @include media-down(xsm) {
+            font-size: 1.5rem;
+        }
     }
 
     h3 {
         text-align: center;
         padding: 1rem;
+
+        @include media-down(lg) {
+            font-size: 2rem;
+        }
+        @include media-down(sm) {
+            font-size: 1.7rem;
+        }
+        @include media-down(xsm) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
         text-align: justify;
         padding: 1rem;
+        
+
+        @include media-down(lg) {
+            font-size: 1.3rem;
+        }
+        @include media-down(sm) {
+            font-size: 1.2rem;
+        }
+        @include media-down(xsm) {
+            font-size: 1.1rem;
+        }
     }
 
     b {
         color: $color-azul-texto;
         background-color: $color-verde-claro;
+
+        @include media-down(lg) {}
     }
 
     ul {
@@ -39,7 +77,9 @@
 
         li {
             padding: 12px 20px;
-            color: $color-gris-claro;
+            //color: $color-gris-claro;
+            color: rgba(63, 13, 13, 0.616);
+            font-weight: bold;
             font-size: 1.1rem;
             border-bottom: 1px solid $color-azul-profundo2;
             transition: background 0.3s ease, color 0.3s ease;
@@ -56,6 +96,21 @@
                 font-size: 1.2rem;
                 margin-right: 10px;
             }
+
+            @include media-down(lg) {
+                font-size: 1.5rem;
+
+                &::before {
+                    content: "⭐";
+                    font-size: 1.1rem;
+                }
+            }
+            @include media-down(sm) {
+                font-size: 1.3rem;
+            }
+            @include media-down(xsm) {
+                font-size: 1.0rem;
+            }
         }
     }
 
@@ -65,34 +120,3 @@
     }
 }
 
-
-@include media-down(lg) {
-    .articulo {
-        &-guia {
-            padding: 1rem;
-            width: 100%;
-
-            h2 {
-                font-size: 2.5rem;
-            }
-
-            h3 {
-                font-size: 2.3rem;
-            }
-
-            p {
-                font-size: 1.5rem;
-            }
-
-            ul {
-                li {
-                    font-size: 1.5rem;
-                    &::before {
-                        content: "⭐";
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-    }
-}
