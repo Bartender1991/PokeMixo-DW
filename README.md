@@ -14,7 +14,7 @@ Este repositorio contiene una interfaz visual para una **colección de cartas** 
 - 💡 **CSS Variables (via SASS)** – Uso de variables centralizadas para colores y temas.
 - 🧰 **Flexbox & Grid** – Para diseño responsivo y adaptable.
 - 🕶️ **Transiciones & Hover effects** – UI con efectos visuales suaves y atractivos.
-
+- 🚀 **Bootstrap 5 (Navbar)** – Utilizado exclusivamente para implementar una barra de navegación moderna y responsiva.
 ---
 
 
