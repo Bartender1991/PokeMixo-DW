@@ -17,17 +17,6 @@ Este repositorio contiene una interfaz visual para una **colección de cartas** 
 
 ---
 
-## 📂 Estructura del proyecto
-
-/src
-├── 
-├── 
-│ ├── 
-│ ├──
-│ └──
-├── 
-└── 
-
 
 > El código está escrito siguiendo una **estructura modular**, lo que facilita escalar o modificar el proyecto.
 
@@ -52,12 +41,12 @@ Buenas prácticas con BEM
 UI moderna y responsiva
 
 
-https://bartender1991.github.io/PokeMixo-DW/
+
 
 
 
 🧑‍💻 Autor [Pascualetti, Omar - Mixologyzt]
 📫 [opascualetti21@gmail.com]
-🌐 [Tu portfolio o sitio web]
-🐙 GitHub: @tu-usuario
+🌐 [\[Miralo aqui ➡️\]](https://bartender1991.github.io/PokeMixo-DW/)
+🐙 GitHub: @Bartender1991
 
