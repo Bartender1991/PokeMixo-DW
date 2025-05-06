@@ -87,33 +87,28 @@ main {
   z-index: 1000;
   width: 100%;
 }
-#header .navbar-brand {
+#header .branding {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-#header .navbar-brand img {
-  width: 35%;
+#header .branding img {
+  width: 3rem;
   height: auto;
 }
-@media (max-width: 991.98px) {
-  #header .navbar-brand img {
-    width: 100px;
-  }
-}
-#header .navbar-brand span {
+#header .branding span {
   font-weight: bold;
   font-size: 1.5rem;
   color: white;
   width: 35%;
 }
 @media (max-width: 991.98px) {
-  #header .navbar-brand span {
+  #header .branding span {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 767.98px) {
-  #header .navbar-brand span {
+  #header .branding span {
     display: none;
   }
 }
@@ -134,18 +129,12 @@ main {
   outline: none;
   box-shadow: none;
 }
-
 @media (max-width: 991.98px) {
-  #header .branding a span {
-    font-size: 1.5rem;
-  }
-  #header .branding a img {
-    width: 80px;
-  }
-  #header .navegacion ul li a {
+  #header .navegacion a {
     font-size: 1.5rem;
   }
 }
+
 .footer {
   background-color: #263b5a;
   color: white;
@@ -1132,6 +1121,11 @@ main {
   background-color: #1B2A41;
   color: #E5E5E5;
 }
+@media (max-width: 767.98px) {
+  .baraja {
+    padding: 0;
+  }
+}
 .baraja-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -1143,6 +1137,11 @@ main {
     font-size: 2.3rem;
   }
 }
+@media (max-width: 767.98px) {
+  .baraja-title {
+    font-size: 1.8rem;
+  }
+}
 .baraja-card {
   background: #263b5a;
   border-radius: 12px;
@@ -1150,6 +1149,12 @@ main {
   margin-bottom: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border: 1px solid #4B86B4;
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .baraja-card {
+    padding: 0.5rem;
+  }
 }
 .baraja-name {
   color: #A0E8AF;
@@ -1160,6 +1165,12 @@ main {
 @media (max-width: 991.98px) {
   .baraja-name {
     font-size: 1.9rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .baraja-name {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 .baraja-image {
@@ -1190,7 +1201,7 @@ main {
 }
 @media (max-width: 991.98px) {
   .baraja-list-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: initial;
   }
 }
 .baraja-list-column {
@@ -1211,16 +1222,25 @@ main {
     font-size: 1.3rem;
   }
 }
+@media (max-width: 767.98px) {
+  .baraja-description {
+    font-size: 1rem;
+  }
+}
 .baraja-catergory {
   color: #D4AF37;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  text-decoration: underline;
   text-align: start;
 }
 @media (max-width: 991.98px) {
   .baraja-catergory {
     font-size: 2rem;
   }
+}
+.baraja-catergory-name {
+  text-decoration: underline;
 }
 .baraja-items {
   list-style-type: none;

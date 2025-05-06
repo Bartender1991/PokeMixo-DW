@@ -9,89 +9,62 @@
   z-index: 1000;
   width: 100%;
 
-  .navbar-brand {
+  .branding {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
     img {
-      width: 35%;
+      width: 3rem;
       height: auto;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+      width: 35%;
 
       @include media-down(lg) {
-          width: 100px;
-        }
-      }
-
-      span {
-        font-weight: bold;
         font-size: 1.5rem;
-        color: white;
-        width: 35%;
-
-        @include media-down(lg) {
-          font-size: 1.5rem;
-          }
-
-          @include media-down(md) {
-            display: none;
-          }
-        }
-
-
       }
 
-      //contenedor del hamburgesa
-      .navbar-nav {
-        gap: 1.5rem;
-
-        //links dentro del contenedor 
-        .nav-link {
-          color: white;
-          font-weight: 500;
-
-          &:hover {
-            color: $color-verde-claro;
-          }
-        }
-      }
-
-      //hamburguesa
-
-      .navbar-toggler {
-        background: $color-dorado-apagado;
-
-        &:focus {
-          outline: none;
-          box-shadow: none;
-        }
+      @include media-down(md) {
+        display: none;
       }
     }
+  }
 
+  //contenedor del hamburgesa
+  .navbar-nav {
+    gap: 1.5rem;
 
+    //links dentro del contenedor 
+    .nav-link {
+      color: white;
+      font-weight: 500;
 
-    @include media-down(lg) {
-      #header {
-        .branding {
-          a {
-            span {
-              font-size: 1.5rem;
-            }
-
-            img {
-              width: 80px;
-            }
-          }
-        }
-
-        .navegacion {
-          ul {
-            li {
-              a {
-                font-size: 1.5rem;
-              }
-            }
-          }
-        }
+      &:hover {
+        color: $color-verde-claro;
       }
     }
+  }
+
+  //hamburguesa
+  .navbar-toggler {
+    background: $color-dorado-apagado;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .navegacion {
+    a {
+      @include media-down(lg) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
