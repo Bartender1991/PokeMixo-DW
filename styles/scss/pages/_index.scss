@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 92px 2rem 0;
-    height: $calculo-header;
     gap: 2rem;
     background-color: $color-azul-profundo;
     flex-wrap: wrap;
@@ -109,7 +108,6 @@
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        width: calc(50% - 1rem);
 
         @include media-down(lg) {
             width: 90%;

@@ -17,6 +17,7 @@
 
     @include media-down(lg) {
         padding: 0;
+        max-width: 1000px;
         width: 100%;
     }
     h2 {
