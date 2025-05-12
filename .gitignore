@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+.env
+dist/
+build/
+
+# Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos personales
+*.local
+*.bak
+*.swp
+
+# Otros
+*.zip
+*.tar.gz

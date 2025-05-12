@@ -2,10 +2,31 @@
 @use "../abstracts/breakpoints" as *;
 
 .main-coleccion {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    max-width: 2000px;
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+    display: grid;
     gap: 2rem;
+    grid-template-areas:
+        "s s s s s "
+        "f c c c c "
+        "f c c c c "
+    ;
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+}
+
+.grid {
+    &-form {
+        grid-area: f;
+    }
+
+    &-set {
+        grid-area: s;
+    }
+
+    &-card {
+        grid-area: c;
+    }
 }
 
 .set {
@@ -89,6 +110,7 @@
         @include media-down(lg) {
             font-size: 1.5rem;
         }
+
         @include media-down(md) {
             font-size: 1.4rem;
             font-weight: 500;
@@ -99,8 +121,7 @@
 .card {
     &-grid {
         &-section {
-            width: 80%;
-            max-width: 1400px;
+            width: 100%;
             margin: 0 auto;
             padding: 0 20px;
 
@@ -120,6 +141,7 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+
             @include media-down(md) {
                 font-size: 1.8rem;
                 font-weight: 500;
@@ -128,11 +150,9 @@
 
         &-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 0.5rem;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 1400px;
+            padding: 1rem;
         }
     }
 
@@ -204,8 +224,6 @@
     }
 
     &-image {
-        width: 100%;
-        //height: 280px;
         object-fit: contain;
         padding: 1rem;
         background-color: white;
@@ -232,7 +250,7 @@
 
     &-expansion {
         text-align: left;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         margin: 0.2rem 0;
         color: #9a9693;
         font-style: italic;
@@ -244,7 +262,7 @@
 
     &-number {
         text-align: left;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 0.2rem 0;
         color: #9a9693;
         font-style: italic;
@@ -257,16 +275,34 @@
     &-rareza {
         &-container {
             display: flex;
-            justify-content: left;
+            justify-content: flex-start;
         }
 
         &-icon {
-            width: 20px;
-            height: auto;
+            width: 2.5rem;
 
             @include media-down(lg) {
                 width: 40px;
             }
         }
+
     }
+
+    &-contenedor {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    &-agregar {
+        width: 12%;
+        height: auto;
+        padding-left: 5px;
+    }
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+     padding-bottom: 1.5rem;
 }
