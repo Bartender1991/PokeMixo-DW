@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    background-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.centro {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.separador1 {
+    height: 10px;
+    clear: both;
+}
+.separador2{
+    width: 2%;
+    height: 1px;
+    float: left;
+    
+}
+
+.main {
+    height: 1200px;
+}
+
+.main img {
+    width: 49%;
+    float: left;
+}
+
+img {
+    transition: all 0.5s ease;
+    border-style: solid;
+    border-color: white;
+}
+
+img:hover {
+    transform: scale(0.9);
+    border-radius: 30px;
+}
+
+body {
+    background-image: url(img/foto1.jpg);
+    /* coloca una imagen de fondo */
+    background-position: center;
+    /* centra la imagen */
+    background-repeat: no-repeat;
+    /* hace que no se repita en los bordes */
+    background-size: cover;
+    /* hace que ocupe todo el contenido */
+    background-attachment: fixed;
+    /* hace que la img quede fija y no se mueva con el scroll */
+}
