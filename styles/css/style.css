@@ -1279,14 +1279,15 @@ main {
 }
 @media (max-width: 991.98px) {
   .set {
-    width: 95%;
-    margin-top: 2rem;
+    width: 100%;
   }
 }
 @media (max-width: 767.98px) {
   .set {
     flex-direction: column;
-    margin-top: 0rem;
+    width: 96%;
+    margin-left: 0.4rem;
+    margin-right: 0.5rem;
   }
 }
 .set:hover {
@@ -1451,7 +1452,7 @@ main {
 .card-image {
   width: 100%;
   object-fit: contain;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: white;
   border-bottom: 2px solid #4B86B4;
   transition: transform 0.3s ease;
