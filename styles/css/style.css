@@ -1264,19 +1264,68 @@ main {
 
 .g {
   display: grid;
+  gap: 1rem;
   grid-template-areas: "s s s s s" "t t t t t" "f c c c c" "f c c c c";
-}
-.g-filtro {
-  grid-area: f;
+  grid-template-columns: 16rem 1fr 1fr 1fr 1fr;
 }
 .g-set {
+  border: 1px solid red;
   grid-area: s;
+}
+.g-set-section {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.g-set-section-info {
+  display: flex;
+  border: 1px solid green;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .g-tablero {
   grid-area: t;
 }
+.g-tablero-titulo {
+  text-align: center;
+}
+.g-tablero-f {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.g-filtro {
+  grid-area: f;
+}
+.g-filtro fieldset {
+  display: flex;
+}
 .g-carta {
   grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: rgb(86, 83, 83);
+}
+.g-carta-item {
+  padding: 1rem;
+}
+.g-carta-info {
+  padding-top: 0.5rem;
+}
+.g-carta-info-grupo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.g-carta-info-grupo-rareza {
+  width: 15%;
+}
+.g-carta-info-grupo-boton {
+  width: 15%;
 }
 
 .subrayado {
